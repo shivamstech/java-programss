@@ -24,6 +24,9 @@ public class ArrayProgram
             System.out.print(" "+arr1[i]);
         }
 
+     //----------------------------------------------------------
+
+
 
     }
 
