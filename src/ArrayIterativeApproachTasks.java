@@ -1,24 +1,48 @@
 public class ArrayIterativeApproachTasks {
     public static void main(String[] args) {
 
-        //WAP to calculate the sum of even and odd numbers separately in a given array.
+//        //WAP to calculate the sum of even and odd numbers separately in a given array.
+//
+//        int[] arr={10,20,33,40,53,60,77};
+//
+//        int evensum=0;
+//        int oddsum=0;
+//
+//        for(int i=0; i<arr.length; i++)
+//        {
+//            if(arr[i]%2 ==0)
+//            {
+//               evensum +=arr[i];
+//            }
+//            else{
+//
+//                oddsum +=arr[i];
+//            }
+//        }
+//        System.out.println("Sum of even numbers "+evensum+" & Sum of odd number is "+oddsum);
 
-        int[] arr={10,20,33,40,53,60,77};
+        // WAP to count the number of positive, negative, and zero elements in a given array.
 
-        int evensum=0;
-        int oddsum=0;
+        int[] arr1={10,20,0,0,-1,0,-4,10,20};
 
-        for(int i=0; i<arr.length; i++)
+        int positivevalue=0 , zero=0 , negativevalue=0 ;
+
+        for(int i=0; i<arr1.length; i++)
         {
-            if(arr[i]%2 ==0)
+            if(arr1[i]>0)
             {
-               evensum +=arr[i];
+                positivevalue++;
             }
-            else{
-
-                oddsum +=arr[i];
+            else if(arr1[i]<0)
+            {
+                negativevalue++;
+            }
+            else if(arr1[i]==0)
+            {
+                zero++;
             }
         }
-        System.out.println("Sum of even numbers "+evensum+" & Sum of odd number is "+oddsum);
+        System.out.println("positive value is "+positivevalue+" / negative value is  "+negativevalue+" / Zero value is  "+zero);
+
     }
 }
