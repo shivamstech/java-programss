@@ -39,8 +39,38 @@ public class ArrayBruteForceApproachTasks {
 
         //==================================================================
 
-        // o WAP to Count the Frequency of Each Element
+//        // o WAP to Count the Frequency of Each Element
+//
+//
+//        int[] arr = {10, 20, 10, 30, 20, 40, 10};
+//
+//        int n = arr.length;
+//
+//        boolean[] bArr = new boolean[n];
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            if(bArr[i])
+//            {
+//                continue;
+//            }
+//
+//            int count = 1;
+//            for(int j=i+1; j<n; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    count++;
+//                    bArr[j] = true;
+//                }
+//            }
+//
+//            System.out.println(arr[i]+" -> "+count+" times");
+//        }
 
+        //=============================================================
+
+        // o WAP to print only the elements with frequency greater than 1
 
         int[] arr = {10, 20, 10, 30, 20, 40, 10};
 
@@ -65,7 +95,10 @@ public class ArrayBruteForceApproachTasks {
                 }
             }
 
-            System.out.println(arr[i]+" -> "+count+" times");
+            if(count > 1)
+            {
+                System.out.println(arr[i]+" -> "+count+" times");
+            }
         }
 
     }
