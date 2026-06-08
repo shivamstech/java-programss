@@ -167,29 +167,71 @@ public class ArrayBruteForceApproachTasks {
 
         //====================================================================
 
-        //o WAP to find the first non-Repeating Element
+//        //o WAP to find the first non-Repeating Element
+//
+//        int[] arr = {10, 20, 10, 10, 20, 40, 40};
+//
+//        int n = arr.length;
+//
+//        boolean found = false;
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            int count = 0;
+//            for(int j=0; j<n; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    count++;
+//                }
+//            }
+//
+//            if(count == 1)
+//            {
+//                System.out.println("First non-repeating element is "+arr[i]);
+//                found = true;
+//                break;
+//            }
+//        }
+//
+//        if(!found)
+//        {
+//            System.out.println("Non-repeating element not found");
+//        }
 
-        int[] arr = {10, 20, 10, 10, 20, 40, 40};
+        //======================================================================
+
+        // o WAP to find the first non-Repeating Element
+
+        int[] arr = {10, 20, 10, 20, 10, 30};
 
         int n = arr.length;
+
+        boolean[] bArr = new boolean[n];
 
         boolean found = false;
 
         for(int i=0; i<n; i++)
         {
-            int count = 0;
-            for(int j=0; j<n; j++)
+            if(bArr[i])
+            {
+                continue;
+            }
+
+            int count = 1;
+            for(int j=i+1; j<n; j++)
             {
                 if(arr[i] == arr[j])
                 {
                     count++;
+                    bArr[j] = true;
                 }
             }
 
             if(count == 1)
             {
-                System.out.println("First non-repeating element is "+arr[i]);
                 found = true;
+                System.out.println("First non-repeating element is "+arr[i]);
                 break;
             }
         }
@@ -198,6 +240,7 @@ public class ArrayBruteForceApproachTasks {
         {
             System.out.println("Non-repeating element not found");
         }
+
 
     }
 }
