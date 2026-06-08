@@ -142,11 +142,38 @@ public class ArrayBruteForceApproachTasks {
 
      //==============================================================================
 
-        //o WAP to find all non-Repeating Elements in an array
+//        //o WAP to find all non-Repeating Elements in an array
+//
+//        int[] arr = {10, 20, 10, 30, 20, 40, 10};
+//
+//        int n = arr.length;
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            int count = 0;
+//            for(int j=0; j<n; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    count++;
+//                }
+//            }
+//
+//            if(count == 1)
+//            {
+//                System.out.print(arr[i]+" ");
+//            }
+//        }
 
-        int[] arr = {10, 20, 10, 30, 20, 40, 10};
+        //====================================================================
+
+        //o WAP to find the first non-Repeating Element
+
+        int[] arr = {10, 20, 10, 10, 20, 40, 40};
 
         int n = arr.length;
+
+        boolean found = false;
 
         for(int i=0; i<n; i++)
         {
@@ -161,8 +188,15 @@ public class ArrayBruteForceApproachTasks {
 
             if(count == 1)
             {
-                System.out.print(arr[i]+" ");
+                System.out.println("First non-repeating element is "+arr[i]);
+                found = true;
+                break;
             }
+        }
+
+        if(!found)
+        {
+            System.out.println("Non-repeating element not found");
         }
 
     }
