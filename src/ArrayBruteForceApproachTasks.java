@@ -335,49 +335,49 @@ public class ArrayBruteForceApproachTasks {
 
         //=================================================================
 
-        // o WAP to remove duplicate elements in an array
-
-        int[] arr = {10, 20, 10, 50, 20, 30, 40};
-
-        int n = arr.length;
-
-        int index = 0;
-
-        for(int i=0; i<n; i++)
-        {
-            boolean found = false;
-
-            for(int j=0; j<index; j++)
-            {
-                if(arr[i] == arr[j])
-                {
-                    found = true;
-                    break;
-                }
-            }
-
-            if(!found)
-            {
-                arr[index] = arr[i];
-                index++;
-            }
-        }
-
-//        for(int i=index; i<n; i++)
+//        // o WAP to remove duplicate elements in an array
+//
+//        int[] arr = {10, 20, 10, 50, 20, 30, 40};
+//
+//        int n = arr.length;
+//
+//        int index = 0;
+//
+//        for(int i=0; i<n; i++)
 //        {
-//            arr[i] = 0;
+//            boolean found = false;
+//
+//            for(int j=0; j<index; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    found = true;
+//                    break;
+//                }
+//            }
+//
+//            if(!found)
+//            {
+//                arr[index] = arr[i];
+//                index++;
+//            }
 //        }
-
-        while(index < n)
-        {
-            arr[index] = 0;
-            index++;
-        }
-
-        for(int no : arr)
-        {
-            System.out.print(no+" ");
-        }
+//
+////        for(int i=index; i<n; i++)
+////        {
+////            arr[i] = 0;
+////        }
+//
+//        while(index < n)
+//        {
+//            arr[index] = 0;
+//            index++;
+//        }
+//
+//        for(int no : arr)
+//        {
+//            System.out.print(no+" ");
+//        }
 
 
     }
