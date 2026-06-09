@@ -300,7 +300,42 @@ public class ArrayBruteForceApproachTasks {
 
     //=======================================================================
 
-        //o WAP to remove duplicate elements in an array
+//        //o WAP to remove duplicate elements in an array
+//
+//        int[] arr = {10, 20, 10, 50, 20, 30, 40};
+//
+//        int n = arr.length;
+//
+//        int index = 0;
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            boolean found = false;
+//
+//            for(int j=0; j<index; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    found = true;
+//                    break;
+//                }
+//            }
+//
+//            if(!found)
+//            {
+//                arr[index] = arr[i];
+//                index++;
+//            }
+//        }
+//
+//        for(int i=0; i<index; i++)
+//        {
+//            System.out.print(arr[i]+" ");
+//        }
+
+        //=================================================================
+
+        // o WAP to remove duplicate elements in an array
 
         int[] arr = {10, 20, 10, 50, 20, 30, 40};
 
@@ -328,9 +363,20 @@ public class ArrayBruteForceApproachTasks {
             }
         }
 
-        for(int i=0; i<index; i++)
+//        for(int i=index; i<n; i++)
+//        {
+//            arr[i] = 0;
+//        }
+
+        while(index < n)
         {
-            System.out.print(arr[i]+" ");
+            arr[index] = 0;
+            index++;
+        }
+
+        for(int no : arr)
+        {
+            System.out.print(no+" ");
         }
 
 
