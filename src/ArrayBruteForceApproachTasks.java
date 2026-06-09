@@ -263,41 +263,75 @@ public class ArrayBruteForceApproachTasks {
 
         //=======================================================================
 
+//        //o WAP to remove duplicate elements in an array
+//        //    -> Using temporary array
+//
+//        int[] arr = {10, 20, 10, 50, 20, 30, 40};
+//
+//        int n = arr.length;
+//        int[] temp = new int[n];
+//
+//        int index = 0;
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            boolean isDuplicate = false;
+//
+//            for(int j=0; j<index; j++)
+//            {
+//                if(arr[i] == temp[j])
+//                {
+//                    isDuplicate = true;
+//                    break;
+//                }
+//            }
+//
+//            if(!isDuplicate)
+//            {
+//                temp[index] = arr[i];
+//                index++;
+//            }
+//        }
+//
+//        for(int no : temp)
+//        {
+//            System.out.print(no+" ");
+//        }
+
+    //=======================================================================
+
         //o WAP to remove duplicate elements in an array
-        //    -> Using temporary array
 
         int[] arr = {10, 20, 10, 50, 20, 30, 40};
 
         int n = arr.length;
-        int[] temp = new int[n];
 
         int index = 0;
 
         for(int i=0; i<n; i++)
         {
-            boolean isDuplicate = false;
+            boolean found = false;
 
             for(int j=0; j<index; j++)
             {
-                if(arr[i] == temp[j])
+                if(arr[i] == arr[j])
                 {
-                    isDuplicate = true;
+                    found = true;
                     break;
                 }
             }
 
-            if(!isDuplicate)
+            if(!found)
             {
-                temp[index] = arr[i];
+                arr[index] = arr[i];
                 index++;
             }
         }
 
-        for(int no : temp)
+        for(int i=0; i<index; i++)
         {
-            System.out.print(no+" ");
+            System.out.print(arr[i]+" ");
         }
-
 
 
     }
