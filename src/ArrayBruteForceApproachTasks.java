@@ -4,7 +4,10 @@ public class ArrayBruteForceApproachTasks {
 //        // o WAP to find the intersection of two arrays (Common Elements)
 //        // [1,2,3,4,5]+[3,4,5,6,7] = [3,4,5]
 //
-//        int[] arr1 = {1, 2, 3, 4, 5};
+
+        //** agar duplicate rakhna ho tou ye use karo agar nhi tou iska dusra wala ↓
+//
+//        int[] arr1 = {1, 2, 3, 3, 3, 3, 3, 4, 5};
 //        int[] arr2 = {3, 4, 5, 6, 7};
 //
 //        int n1=arr1.length;
@@ -13,7 +16,7 @@ public class ArrayBruteForceApproachTasks {
 //        int index=0;
 //
 //
-//        int[] newArr = new int[Math.min(arr1.length, arr2.length)];
+//        int[] newArr = new int[Math.max(arr1.length, arr2.length)];
 //
 //        for(int i=0; i<n1; i++)
 //        {
@@ -23,6 +26,7 @@ public class ArrayBruteForceApproachTasks {
 //                {
 //                    newArr[index]=arr1[i];
 //                    index++;
+//                     break;
 //                }
 //            }
 //
@@ -32,6 +36,58 @@ public class ArrayBruteForceApproachTasks {
 //            System.out.print(" "+a);
 //
 //        }
+//
+ //------//-----// --------------&& ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+        // ** agar duplicate nhi chaiye ho tou ye
+
+//        int[] arr1 = {1, 2, 3, 3,4,4,4, 5};
+//        int[] arr2 = {3, 4, 5, 4,4,6, 7};
+//
+//        int n1=arr1.length;
+//        int n2=arr2.length;
+//
+//        int[] newArr=new int[Math.min(arr1.length, arr2.length)];
+//
+//        int index=0;
+//
+//        for(int i=0; i<n1; i++)
+//        {
+//            boolean duplicate=true;
+//
+//            for(int k=0; k<i; k++)
+//            {
+//                if(arr1[k]==arr1[i])
+//                {
+//                    duplicate=false;
+//                    break;
+//                }
+//            }
+//
+//            if(!duplicate)
+//            {
+//                continue;
+//            }
+//
+//            for(int j=0; j<n2; j++)
+//            {
+//                if(arr1[i]==arr2[j])
+//                {
+//                    newArr[index]=arr1[i];
+//                    index++;
+//                    break;
+//                }
+//            }
+//
+//
+//        }
+//
+//        for(int a:newArr)
+//        {
+//            System.out.print(" "+a);
+//        }
+//
+
 
         //=======================================================================
 
@@ -413,43 +469,43 @@ public class ArrayBruteForceApproachTasks {
 //        }
 
      //=================================================================================
-
-        // * Search an element in a sorted array using Binary Search.
-
-
-        int[] arr = {6, 8, 11, 21, 27, 32, 42, 55, 73, 81, 87, 93};
-
-        int element = 57;
-
-        int li = 0;
-        int hi = arr.length - 1;
-
-        boolean isFound = false;
-
-        while(li <= hi)
-        {
-            int mid = (li+hi) / 2;
-
-            if(arr[mid] == element)
-            {
-                System.out.println("Element found at index position : "+mid);
-                isFound = true;
-                break;
-            }
-            if(element > arr[mid])
-            {
-                li = mid + 1;
-            }
-            else
-            {
-                hi = mid - 1;
-            }
-        }
-
-        if(!isFound)
-        {
-            System.out.println("Element not found");
-        }
+//
+//        // * Search an element in a sorted array using Binary Search.
+//
+//
+//        int[] arr = {6, 8, 11, 21, 27, 32, 42, 55, 73, 81, 87, 93};
+//
+//        int element = 57;
+//
+//        int li = 0;
+//        int hi = arr.length - 1;
+//
+//        boolean isFound = false;
+//
+//        while(li <= hi)
+//        {
+//            int mid = (li+hi) / 2;
+//
+//            if(arr[mid] == element)
+//            {
+//                System.out.println("Element found at index position : "+mid);
+//                isFound = true;
+//                break;
+//            }
+//            if(element > arr[mid])
+//            {
+//                li = mid + 1;
+//            }
+//            else
+//            {
+//                hi = mid - 1;
+//            }
+//        }
+//
+//        if(!isFound)
+//        {
+//            System.out.println("Element not found");
+//        }
 
     }
 }
