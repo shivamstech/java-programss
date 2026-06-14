@@ -37,7 +37,7 @@ public class Array_BruteForceApproach {
      // ======================================================================
 
 
-//         //AP to find the duplicate elements in an array
+//         //WAP to find the duplicate elements in an array
 //          //— duplicate number is occured more then two times
 //
 //          int[] arr={10,20,30,10,30,10,20,50,40,40};
@@ -77,46 +77,52 @@ public class Array_BruteForceApproach {
 
           //================================================================
 
-          // 2. Find the union of two arrays
-          //[10, 20, 30, 40] [30, 40, 50, 60] = [10,20,30,40,50,60]
+//          // 2. Find the union of two arrays
+//          //[10, 20, 30, 40] [30, 40, 50, 60] = [10,20,30,40,50,60]
+//
+//          int[] arr={10,20,30,40};
+//          int[] arr2={30,40,50,60};
+//
+//          int n1=arr.length;
+//          int n2=arr2.length;
+//
+//          int[] newArr=new int[n1+n2];
+//          int index=0;
+//
+//
+//        for(int i=0; i<n1; i++)
+//        {
+//            newArr[i]=arr[i];
+//            index++;
+//        }
+//
+//        for(int i=0; i<n2; i++)
+//        {
+//            boolean isDuplicate=false;
+//            for(int j=0; j<newArr.length ; j++)
+//            {
+//               if(arr2[i] == newArr[j])
+//               {
+//                   isDuplicate=true;
+//               }
+//
+//            }
+//            if(!isDuplicate)
+//            {
+//                newArr[index]=arr2[i];
+//                index++;
+//            }
+//        }
+//        for(int a:newArr)
+//        {
+//            System.out.print(" "+a);
+//        }
+//
 
-          int[] arr={10,20,30,40};
-          int[] arr2={30,40,50,60};
-
-          int n1=arr.length;
-          int n2=arr2.length;
-
-          int[] newArr=new int[n1+n2];
-          int index=0;
+          //=======================================================================
 
 
-        for(int i=0; i<n1; i++)
-        {
-            newArr[i]=arr[i];
-            index++;
-        }
-
-        for(int i=0; i<n2; i++)
-        {
-            boolean isDuplicate=false;
-            for(int j=0; j<newArr.length ; j++)
-            {
-               if(arr2[i] == newArr[j])
-               {
-                   isDuplicate=true;
-               }
-
-            }
-            if(!isDuplicate)
-            {
-                newArr[index]=arr2[i];
-                index++;
-            }
-        }
-        for(int a:newArr)
-        {
-            System.out.print(" "+a);
-        }
+          //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 

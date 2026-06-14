@@ -27,5 +27,40 @@ public class Array_TwoPointersPrograms {
 //    }
 
 
+    //===========================================================================
+
+    public static void main(String[] args) {
+
+
+        int[] arr = {1, 2, 2, 3, 4, 5, 5, 5, 6, 6, 7};
+
+        int L = 0;
+
+//        for(int R=1; R<arr.length; R++)
+//        {
+//            if(arr[L] != arr[R])
+//            {
+//                L++;
+//                arr[L] = arr[R];
+//            }
+//        }
+
+        int R = 1;
+        while (R < arr.length) {
+            if (arr[L] != arr[R]) {
+                L++;
+                arr[L] = arr[R];
+                R++;
+            } else {
+                R++;
+            }
+        }
+
+        for (int i = 0; i <= L; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+
+    }
 
 }
