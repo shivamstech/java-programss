@@ -29,38 +29,64 @@ public class Array_TwoPointersPrograms {
 
     //===========================================================================
 
+//    public static void main(String[] args) {
+//
+//
+//        int[] arr = {1, 2, 2, 3, 4, 5, 5, 5, 6, 6, 7};
+//
+//        int L = 0;
+//
+////        for(int R=1; R<arr.length; R++)
+////        {
+////            if(arr[L] != arr[R])
+////            {
+////                L++;
+////                arr[L] = arr[R];
+////            }
+////        }
+//
+//        int R = 1;
+//        while (R < arr.length) {
+//            if (arr[L] != arr[R]) {
+//                L++;
+//                arr[L] = arr[R];
+//                R++;
+//            } else {
+//                R++;
+//            }
+//        }
+//
+//        for (int i = 0; i <= L; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//
+//    }
+
+    //============================================================================
+
     public static void main(String[] args) {
 
-
-        int[] arr = {1, 2, 2, 3, 4, 5, 5, 5, 6, 6, 7};
+        int[] arr = {5, 0, 6, 3, 0, 0, 0, 1, 2, 0, 7};
 
         int L = 0;
 
-//        for(int R=1; R<arr.length; R++)
-//        {
-//            if(arr[L] != arr[R])
-//            {
-//                L++;
-//                arr[L] = arr[R];
-//            }
-//        }
-
-        int R = 1;
-        while (R < arr.length) {
-            if (arr[L] != arr[R]) {
-                L++;
+        for(int R=0; R<arr.length; R++)
+        {
+            if(arr[R] != 0)
+            {
+                int temp = arr[L];
                 arr[L] = arr[R];
-                R++;
-            } else {
-                R++;
+                arr[R] = temp;
+
+                L++;
             }
         }
 
-        for (int i = 0; i <= L; i++) {
-            System.out.print(arr[i] + " ");
+        for(int no : arr)
+        {
+            System.out.print(no+" ");
         }
 
-
     }
-
 }
