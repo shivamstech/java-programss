@@ -36,14 +36,14 @@ public class Array_TwoPointersPrograms {
 //
 //        int L = 0;
 //
-////        for(int R=1; R<arr.length; R++)
-////        {
-////            if(arr[L] != arr[R])
-////            {
-////                L++;
-////                arr[L] = arr[R];
-////            }
-////        }
+// //        for(int R=1; R<arr.length; R++)
+// //        {
+// //            if(arr[L] != arr[R])
+// //            {
+// //                L++;
+// //                arr[L] = arr[R];
+// //            }
+// //        }
 //
 //        int R = 1;
 //        while (R < arr.length) {
